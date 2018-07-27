@@ -1,33 +1,16 @@
 // Given a integer, return a integer that is the reverse ordering of numbers.
 
-function reverse(n){
+function reverseInt(n){
   let reversed = n.toString().split("").reverse("").join("");
   if(n < 0){
-    return parseInt(reversed) * - 1
+    return parseInt(reversed) * -1 // multiply the result -1 to convert into a negative number.
   }
   return parseInt(reversed);
 }
+console.log(reverseInt(-211));
 
-console.log(reverse(345533));
-
-function reverse(str){
-  const arr = str.toString().split('');
-  arr.reverse();
-  return arr.join('');
+function reverseInt(num){
+  const reversed = num.toString().split('').reverse().join("");
+  return parseInt(reversed);
 }
-console.log(reverse(1234));
-
-function reverse(str){
-  let reversed = '';
-  for(let character of str.toString()){
-    reversed = character + reversed;
-  }
-  return reversed;
-}
-console.log(reverse(51059));
-
-// (ADVANCED)
-function reverse(str){
-  return str.toString().split('').reduce((rev, char) => char + rev, '');
-}
-console.log(reverse(1234));
+console.log(reverseInt(123456));

@@ -13,8 +13,8 @@ function maxString(str){
   }
   return maxString;
 }
-
 console.log(maxString("hello there"));
+
 
 function maxString(str){
   var max = 0;
@@ -27,5 +27,28 @@ function maxString(str){
   });
   return maxChar;
 }
-
 console.log(maxString("hello there"));
+
+
+function maxChar(str){
+  const charMap = {};
+  let max = 0;
+  let maxChar = "";
+
+  for(let char of str.toString()){
+    if(charMap[char]){
+      charMap[char]++;
+    } else {
+      charMap[char] = 1;
+    }
+  }
+  console.log(charMap);
+  for(let char in charMap){
+    if(charMap[char] > max){
+      max = charMap[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
+}
+console.log(maxChar("I live in the bay area"));

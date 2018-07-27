@@ -1,6 +1,5 @@
 // Given a string, return a new string with the reversed order of characters.
 
-// 1.
 function reverse(str){
   var arr = [];
   arr = str.split("");
@@ -9,7 +8,6 @@ function reverse(str){
 }
 console.log(reverse("hello"));
 
-// 2.
 function reverse(str){
   var newString = "";
   for(var i = str.length - 1; i >=0; i--){
@@ -19,9 +17,26 @@ function reverse(str){
 }
 console.log(reverse("Hello"));
 
-// // 3. More Advanced Solution
 function reverse(str){
-  str.split("").reduce((reversed,character) =>
-  character + reversed
-  , "");
+  const arr = str.toString().split('');
+  arr.reverse();
+  return arr.join('');
 }
+console.log(reverse("basketball"));
+
+
+function reverse(str){
+  let reversed = '';
+  for(let character of str.toString()){
+    reversed = character + reversed;
+  }
+  return reversed;
+}
+console.log(reverse("American Dream"));
+
+
+// (ADVANCED)
+function reverse(str){
+  return str.toString().split('').reduce((rev, char) => char + rev, '');
+}
+console.log(reverse("Foodie"));
