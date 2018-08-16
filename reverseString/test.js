@@ -17,6 +17,10 @@ function reverse(str){
 }
 console.log(reverse("Hello"));
 
+// Turn "str" into an array by splitting it
+// Call "reverse" method on the array
+// Join the array back into a string
+// Return the result
 function reverse(str){
   const arr = str.toString().split('');
   arr.reverse();
